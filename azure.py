@@ -30,13 +30,14 @@ def play_audio(text, save_to_file=None):
             print(f"Azure TTS Error: {response.status_code}, {response.text}")
             return
 
-        # Save audio to file if requested
+        # Save audio to file if requested (for Discord playback)
         if save_to_file:
             with open(save_to_file, "wb") as f:
                 f.write(response.content)
-            print(f"Audio saved to {save_to_file}")
+            
+            return  # Skip local playback when saving for Discord
 
-        # Use BytesIO to create a file-like object from the binary data
+        # Only play locally if no file is being saved (e.g., for main.py local modes)
         audio_data = BytesIO(response.content)
         audio = AudioSegment.from_mp3(audio_data)
         print(f"Playing audio: sample_rate={audio.frame_rate}, channels={audio.channels}")
