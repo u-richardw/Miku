@@ -30,4 +30,5 @@ azure-cognitiveservices-speech
 
 ffmpeg
 
-discord
+discord.py
+PyNaCl
