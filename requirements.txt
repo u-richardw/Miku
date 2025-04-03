@@ -29,3 +29,5 @@ websockets
 azure-cognitiveservices-speech
 
 ffmpeg
+
+discord
