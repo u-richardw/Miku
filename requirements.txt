@@ -1,0 +1,31 @@
+# requirements.txt
+
+# For TTS (Coqui TTS or Azure TTS)
+TTS==0.22.0  # Coqui TTS library for text-to-speech (specific version for stability)
+numpy>=1.22.0  # For audio processing (used in multiple scripts)
+
+# For audio playback
+sounddevice==0.4.6  # For playing audio through speakers
+
+# For speech recognition
+speechrecognition==3.10.4  # SpeechRecognition library for voice input
+webrtcvad==2.0.10  # Voice Activity Detection for speech filtering
+
+# For AI response generation
+ollama==0.3.2  # Ollama library for interacting with the Llama3 model
+
+# For HTTP requests (Azure TTS)
+requests==2.32.3  # For making API calls to Azure TTS
+
+# For file and JSON handling (included in Python standard library, no need to install)
+# os, json, re - no external package required
+
+pydub
+
+pyaudio
+
+websockets
+
+azure-cognitiveservices-speech
+
+ffmpeg
